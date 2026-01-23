@@ -1,0 +1,9 @@
+@font-face {
+    font-family:BG;
+    src: url(../../Resources/assets/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf);
+}
+
+@font-face {
+    font-family:DM ;
+    src: url(../../Resources/assets/fonts/DM_Sans/static/DMSans-Bold.ttf);
+}
