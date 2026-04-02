@@ -25,7 +25,7 @@ function DropDown({ text, img, options = [], color, setCurrentDay, currentDay })
             <div className='flex gap-1 justify-evenly items-center w-fit p-1.5 rounded-[5px] cursor-pointer hover:scale-105 transition-all ' style={{ backgroundColor: color }}>
                 {(img !== "" || img === null || img === undefined) && <img src={img} />}
                 <p>{text}</p>
-                <img src="/images/icon-dropdown.svg" alt="a dropdown icon" style={{rotate : `${isOpen ? "180deg" : "0deg"}`}} className="transition-all"/>
+                <img src="images/icon-dropdown.svg" alt="a dropdown icon" style={{ rotate: `${isOpen ? "180deg" : "0deg"}` }} className="transition-all" />
             </div>
             {
                 isOpen && (
