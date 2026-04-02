@@ -37,23 +37,23 @@ function HourlyForecast({ hourlyForecastData, currentDay, weekDays, setCurrentDa
         {(hourlyForecastData.length > 0) &&
           (isShowMore
             ? hourlyForecastData.map(hourD => (
-                <HForecastItem
-                  key={hourD.hour}
-                  hour={hourD.hour}
-                  temp={Math.round(hourD.temperature)}
-                  code={hourD.weatherCode}
-                  currentHour={currentHour}
-                />
-              ))
+              <HForecastItem
+                key={hourD.hour}
+                hour={hourD.hour}
+                temp={Math.round(hourD.temperature)}
+                code={hourD.weatherCode}
+                currentHour={currentHour}
+              />
+            ))
             : filteredData.map(hourD => (
-                <HForecastItem
-                  key={hourD.hour}
-                  hour={hourD.hour}
-                  temp={Math.round(hourD.temperature)}
-                  code={hourD.weatherCode}
-                  currentHour={currentHour}
-                />
-              ))
+              <HForecastItem
+                key={hourD.hour}
+                hour={hourD.hour}
+                temp={Math.round(hourD.temperature)}
+                code={hourD.weatherCode}
+                currentHour={currentHour}
+              />
+            ))
           )
         }
 
@@ -63,7 +63,7 @@ function HourlyForecast({ hourlyForecastData, currentDay, weekDays, setCurrentDa
         >
           {isShowMore ? "Show Less" : "Show More"}
           <img
-            src="/images/icon-dropdown.svg"
+            src="images/icon-dropdown.svg"
             alt="dropdown icon"
             className="transition-all"
             style={{ rotate: `${isShowMore ? "180deg" : "0deg"}` }}

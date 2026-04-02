@@ -1,8 +1,8 @@
 
 
-function Card({day,max,min,code}){
+function Card({ day, max, min, code }) {
 
-    function getWeatherImage(c) {
+  function getWeatherImage(c) {
     if (c === 0) return "sunny";
     if (c === 1 || c === 2) return "partly-cloudy";
     if (c === 3) return "overcast";
@@ -13,19 +13,19 @@ function Card({day,max,min,code}){
     if (c >= 95 && c <= 99) return "storm";
     return "sunny"; // fallback
   }
-      
-    return(
 
-        <div className='hover:scale-105 transition-all flex flex-col justify-evenly items-center  p-3  bg-[#25253F] rounded-2xl border-2 border-[#353456] w-28 h-40'>
-            <p>{day}</p>
-            <img src={`/images/icon-${getWeatherImage(code)}.webp`}  className = "w-16 h-16" alt="" />
-            <div className='w-full flex justify-between items-center' >
-              <h5>{Math.round(max)}°</h5>
-              <h5>{Math.round(min)}°</h5>
-            </div>
-        </div>
+  return (
 
-    );
+    <div className='hover:scale-105 transition-all flex flex-col justify-evenly items-center  p-3  bg-[#25253F] rounded-2xl border-2 border-[#353456] w-28 h-40'>
+      <p>{day}</p>
+      <img src={`images/icon-${getWeatherImage(code)}.webp`} className="w-16 h-16" alt="" />
+      <div className='w-full flex justify-between items-center' >
+        <h5>{Math.round(max)}°</h5>
+        <h5>{Math.round(min)}°</h5>
+      </div>
+    </div>
+
+  );
 
 
 }
