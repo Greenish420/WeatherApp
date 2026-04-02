@@ -27,12 +27,13 @@ function App() {
 
     const fetchSuggestions = async () => {
       try {
+        // Changed "api" to "secure" to fix the HTTPS/Mixed Content error
         const response = await axios.get(
-          `https://api.geonames.org/searchJSON?q=${query}&maxRows=5&username=Greenish420&featureClass=P`
+          `https://secure.geonames.org/searchJSON?q=${query}&maxRows=5&username=Greenish420&featureClass=P`
         );
         setSuggestions(response.data.geonames || []);
       } catch (err) {
-        console.error(err);
+        console.error("GeoNames Error:", err);
       }
     };
 
