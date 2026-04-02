@@ -33,7 +33,7 @@ function App() {
     const fetchSuggestions = async () => {
       try {
         const response = await axios.get(
-          `http://api.geonames.org/searchJSON?q=${query}&maxRows=5&username=Greenish420&featureClass=P`
+          `https://api.geonames.org/searchJSON?q=${query}&maxRows=5&username=Greenish420&featureClass=P`
         );
         setSuggestions(response.data.geonames || []);
       } catch (err) {
